@@ -23,9 +23,12 @@ jobs:
           cmake --build build/ --clean-first --target all test_coverage || true
         continue-on-error: true
 
-      - name: Run tests and generate coverage report
+      - name: Generate Coverage Report
         run: lcov --capture --directory build --output-file build/test_coverage.info || true
         continue-on-error: true
+
+      - name: Check coverage report file
+        run: ls -l build/test_coverage.info
 
       - name: Upload coverage result to CodeCov
         uses: codecov/codecov-action@v4
