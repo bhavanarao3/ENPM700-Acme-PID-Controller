@@ -1,7 +1,7 @@
 # cpp-boilerplate-v2
 
 # C++ Boilerplate v2 Badges
-![CICD Workflow status](https://github.com/bhavanarao3/ENPM700-Test-Driven/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/bhavanarao3/ENPM700-Test-Driven/graph/badge.svg?token=ieZSBluwp6)](https://codecov.io/gh/bhavanarao3/ENPM700-Test-Driven) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![CICD Workflow status](https://github.com/bhavanarao3/ENPM700-Acme-PID-COntroller/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/bhavanarao3/ENPM700-Acme-PID-Controller/graph/badge.svg?token=AAc36usRbX)](https://codecov.io/gh/bhavanarao3/ENPM700-Acme-PID-Controller) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
 ## Overview
