@@ -41,3 +41,5 @@ target_link_libraries(pid-test PUBLIC
 # binary, using the GoogleTest CMake module.
 gtest_discover_tests(cpp-test)
 gtest_discover_tests(pid-test)
+
+
