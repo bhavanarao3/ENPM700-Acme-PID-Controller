@@ -11,31 +11,51 @@
 
 // Test for the constructor
 TEST(PIDControllerTest, ConstructorInitializesCorrectly) {
+    EXPECT_NO_THROW(PIDController(1.0, 0.5, 0.1));
+}
+
+// Test for compute function with zero inputs
+TEST(PIDControllerTest, ComputeWithZeroInputs) {
     PIDController pid(1.0, 0.5, 0.1);
-    // Just check if the PIDController object can be instantiated
-    EXPECT_TRUE(true); // A placeholder, as we cannot check the existence of a local variable directly
+    double output = pid.compute(0.0, 0.0);
+    EXPECT_NEAR(output, 0.0, 0.001);
 }
 
-// Test for the compute function with a simple example
-TEST(PIDControllerTest, ComputeReturnsCorrectValue) {
-    PIDController pid(1.0, 0.1, 0.01);
-    double output = pid.compute(10.0, 5.0); // Replace with your expected logic
-    EXPECT_NEAR(output, 0.0, 0.001); // Adjust expected value as per your logic
+// Test for compute function with positive error
+TEST(PIDControllerTest, ComputeWithPositiveError) {
+    PIDController pid(1.0, 0.5, 0.1);
+    double output = pid.compute(10.0, 5.0);
+    EXPECT_NEAR(output, 8.0, 0.001); 
 }
 
-// Test for compute function with a different scenario
-TEST(PIDControllerTest, ComputeWithDifferentInputs) {
-    PIDController pid(2.0, 0.2, 0.02);
-    double output = pid.compute(20.0, 15.0); // Replace with your expected logic
-    EXPECT_NEAR(output, 1.0, 0.001); // Adjust expected value as per your logic
+// Test for compute function with negative error
+TEST(PIDControllerTest, ComputeWithNegativeError) {
+    PIDController pid(1.0, 0.5, 0.1);
+    double output = pid.compute(5.0, 10.0);
+    EXPECT_NEAR(output, -8.0, 0.001); 
 }
 
-// Example of a failing test case (update the logic as needed)
+
+// Test for compute function after multiple iterations
+TEST(PIDControllerTest, ComputeWithMultipleIterations) {
+    PIDController pid(1.0, 0.5, 0.1);
+    double output1 = pid.compute(20.0, 15.0); // First call
+    double output2 = pid.compute(20.0, 17.0); // Second call
+    double output3 = pid.compute(20.0, 18.0); // Third call
+
+    EXPECT_NEAR(output1, 8.0, 0.001); 
+    EXPECT_NEAR(output2, 6.8, 0.001); 
+    EXPECT_NEAR(output3, 6.9, 0.001); 
+}
+
+// Extreme setpoint
 TEST(PIDControllerTest, ComputeFailsForIncorrectExpectation) {
-    PIDController pid(1.0, 0.1, 0.01);
-    double output = pid.compute(5.0, 0.0); // Replace with your expected logic
-    EXPECT_NEAR(output, 1.0, 0.001); // This is expected to fail for demonstration
+    PIDController pid(1.0, 0.5, 0.1);
+    double output = pid.compute(1000.0, 0.0);
+    EXPECT_NEAR(output, 1600, 0.001); 
 }
+
+
 
 // Main function to run all tests
 int main(int argc, char **argv) {
