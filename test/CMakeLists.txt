@@ -2,6 +2,7 @@
 add_executable(pid-test
   # list of source cpp files:
   test_pid.cpp
+  ../app/PIDController.cpp     # Add the source file for PIDController
   )
 
 # Any include directories needed to build this target.
@@ -17,7 +18,6 @@ target_include_directories(pid-test PUBLIC
 target_link_libraries(pid-test PUBLIC
   # list of libraries:
   gtest
-  PID
   )
 
 # Enable CMake’s test runner to discover the tests included in the

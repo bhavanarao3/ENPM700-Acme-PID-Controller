@@ -26,7 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Acme PID Controller
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">PID controller implementation for a new mobile robot product development</div>
   </td>
  </tr>
  </tbody>
@@ -88,27 +90,28 @@ $(document).ready(function(){initNavTree('_p_i_d_controller_8hpp_source.html',''
 <a href="_p_i_d_controller_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PIDCONTROLLER_HPP</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PIDCONTROLLER_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_p_i_d_controller.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d_controller.html">PIDController</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_p_i_d_controller.html#a5f2463dddff88410ec223cbc050901d9">PIDController</a>(<span class="keywordtype">double</span> kp, <span class="keywordtype">double</span> ki, <span class="keywordtype">double</span> kd, <span class="keywordtype">double</span> int_limit = 10.0, <span class="keywordtype">double</span> derivative_filter = 1.0);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_controller.html#add3a9a2343d946580223dd940fd2b31f">compute</a>(<span class="keywordtype">double</span> setpoint, <span class="keywordtype">double</span> actual_position, <span class="keywordtype">double</span> dt = 1.0);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span> kp;                   </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> ki;                   </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> kd;                   </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> integral_sum;         </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> previous_error;       </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">double</span> integral_limit;       </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">double</span> derivative_filter;    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">double</span> previous_derivative;  </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// PIDCONTROLLER_HPP</span></div>
-<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdoc">A simple Proportional-Integral-Derivative (PID) controller class for control system applications.</div><div class="ttdef"><b>Definition:</b> PIDController.hpp:17</div></div>
-<div class="ttc" id="aclass_p_i_d_controller_html_a5f2463dddff88410ec223cbc050901d9"><div class="ttname"><a href="class_p_i_d_controller.html#a5f2463dddff88410ec223cbc050901d9">PIDController::PIDController</a></div><div class="ttdeci">PIDController(double kp, double ki, double kd, double int_limit=10.0, double derivative_filter=1.0)</div><div class="ttdoc">Constructor for the PIDController class.</div><div class="ttdef"><b>Definition:</b> PIDController.cpp:18</div></div>
-<div class="ttc" id="aclass_p_i_d_controller_html_add3a9a2343d946580223dd940fd2b31f"><div class="ttname"><a href="class_p_i_d_controller.html#add3a9a2343d946580223dd940fd2b31f">PIDController::compute</a></div><div class="ttdeci">double compute(double setpoint, double actual_position, double dt=1.0)</div><div class="ttdoc">Computes the control output of the PID controller.</div><div class="ttdef"><b>Definition:</b> PIDController.cpp:37</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_p_i_d_controller.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d_controller.html">PIDController</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="class_p_i_d_controller.html#a5f2463dddff88410ec223cbc050901d9">PIDController</a>(<span class="keywordtype">double</span> kp, <span class="keywordtype">double</span> ki, <span class="keywordtype">double</span> kd, <span class="keywordtype">double</span> int_limit = 10.0,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordtype">double</span> derivative_filter = 1.0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_controller.html#add3a9a2343d946580223dd940fd2b31f">compute</a>(<span class="keywordtype">double</span> setpoint, <span class="keywordtype">double</span> actual_position, <span class="keywordtype">double</span> dt = 1.0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">double</span> kp;                </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">double</span> ki;                </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">double</span> kd;                </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">double</span> integral_sum;      </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">double</span> previous_error;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">double</span> integral_limit;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">double</span> derivative_filter; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">double</span> previous_derivative; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PIDCONTROLLER_HPP</span></div>
+<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdoc">A simple Proportional-Integral-Derivative (PID) controller class for control system applications.</div><div class="ttdef"><b>Definition:</b> PIDController.hpp:19</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_a5f2463dddff88410ec223cbc050901d9"><div class="ttname"><a href="class_p_i_d_controller.html#a5f2463dddff88410ec223cbc050901d9">PIDController::PIDController</a></div><div class="ttdeci">PIDController(double kp, double ki, double kd, double int_limit=10.0, double derivative_filter=1.0)</div><div class="ttdoc">Constructor for the PIDController class.</div><div class="ttdef"><b>Definition:</b> PIDController.cpp:19</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_add3a9a2343d946580223dd940fd2b31f"><div class="ttname"><a href="class_p_i_d_controller.html#add3a9a2343d946580223dd940fd2b31f">PIDController::compute</a></div><div class="ttdeci">double compute(double setpoint, double actual_position, double dt=1.0)</div><div class="ttdoc">Computes the control output of the PID controller.</div><div class="ttdef"><b>Definition:</b> PIDController.cpp:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
