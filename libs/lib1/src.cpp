@@ -1,4 +1,3 @@
-int my_function1(int input)
-{
+int my_function1(int input) {
   return input;
 }
