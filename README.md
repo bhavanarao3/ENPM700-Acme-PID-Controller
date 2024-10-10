@@ -7,12 +7,12 @@
 ## Authors
 
 ### Part 1
-- Bhavana B Rao
-- Kshitij Aggarwal
+- Driver: Bhavana B Rao
+- Navigator: Kshitij Aggarwal
 
 ### Part 2
-- Piyush Goenka
-- Kashif Ansari
+- Driver: Piyush Goenka
+- Navigator: Kashif Ansari
 ## Overview
 
 ## Structure
@@ -87,4 +87,4 @@ This generates a index.html page in the build/app_coverage sub-directory that ca
 ## Notes
 
 The UML Diagram is inside the html directory i.e. doxygen documentation, as well as in the results directory.
-THe cpplint and clang-tidy results are in the results directory.
+The cpplint and clang-tidy results are in the results directory.
