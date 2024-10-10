@@ -15,6 +15,11 @@
 - Kashif Ansari
 ## Overview
 
+## Structure
+The main.cpp and PIDController.cpp source file are within the app directory.
+PIDController.hpp header file is within the include directory.
+test_pid.cpp test file is within the test directory.
+
 Simple starter C++ project with:
 
 - CMake
@@ -81,5 +86,5 @@ This generates a index.html page in the build/app_coverage sub-directory that ca
 
 ## Notes
 
-The UML Diagram is inside the html directory and in the doxygen documentation.
+The UML Diagram is inside the html directory i.e. doxygen documentation, as well as in the results directory.
 THe cpplint and clang-tidy results are in the results directory.
